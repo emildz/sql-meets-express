@@ -1,20 +1,16 @@
 //get the client
 const mysql = require('mysql2');
 // create the connection to database
-const connection = mysql.createConnection({
-    host: '34.67.146.233',
-    user: 'root',
-    password: 'BuildingSoFlo',
-    database: 'Commerce'
-});
-// const query = `SELECT * FROM Products`;
+// const connection = mysql.createConnection({
+// // see credentials file
+// // const query = `SELECT * FROM Products`;
 
-// connection.query(query, (err, results, fields) =>{
-//     if(err){
-//         console.log(err)
-//     }
-//      console.log(results)
-// });
+// // connection.query(query, (err, results, fields) =>{
+// //     if(err){
+// //         console.log(err)
+// //     }
+// //      console.log(results)
+// // });
 
 
 const getAllProducts = async () =>{
@@ -37,8 +33,8 @@ const createProducts = async (product) => {
 }    
 
 //getAllProducts()
- createProducts(
-   {description: "Emil new Product",
+ createProducts({
+    description: "Emil new Product",
    sku: "Emil1234",
    userId: 1
 
